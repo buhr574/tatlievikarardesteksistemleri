@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Şube Aylık ve Yıllık Kâr Analizi</title>
+    <link rel="stylesheet" href="/css/subeler.css" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script>
+      google.charts.load("current", { packages: ["corechart", "bar"] });
+    </script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Tatlı Evi</h2>
+      <ul>
+        <li><a href="/anasayfa">Anasayfa</a></li>
+        <li><a href="/subeler">Şubeler</a></li>
+        <li><a href="/tatlilar">Tatlılar</a></li>
+        <li><a href="/kartahminleme">Kâr Tahminleme</a></li>
+        <li><a href="/yenisube">Yeni Şube</a></li>
+      </ul>
+    </div>
+    <div class="main-container">
+      <h1>Şube Aylık ve Yıllık Kâr Analizi</h1>
+
+      <!-- İlk Grafik İçin Seçim -->
+      <label for="year-select">Yıl Seçin:</label>
+      <select id="year-select">
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+      </select>
+
+      <label for="branch-select">Şube Seçin:</label>
+      <select id="branch-select">
+        <!-- Şubeler dinamik olarak yüklenecek -->
+      </select>
+
+      <button id="generate-chart">İlk Grafiği Göster</button>
+
+      <!-- İkinci Grafik İçin Buton -->
+      <button id="generate-all-branches-chart" style="margin-left: 10px">
+        Şubelerin Yıllık Kâr Grafiğini Göster
+      </button>
+
+      <!-- İlk Grafik -->
+      <div
+        id="chart_div"
+        style="width: 100%; height: 500px; margin-top: 20px"
+      ></div>
+
+      <!-- İkinci Grafik -->
+      <div
+        id="all-branches-chart"
+        style="width: 100%; height: 500px; margin-top: 50px"
+      ></div>
+    </div>
+    <script src="/js/subeler.js"></script>
+  </body>
+</html>

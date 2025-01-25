@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Şube Bazında Kâr Analizi</title>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="/js/anasayfa.js"></script>
+    <link rel="stylesheet" href="/css/anasayfa.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Tatlı Evi</h2>
+      <ul>
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="/subeler">Şubeler</a></li>
+        <li><a href="/tatlilar">Tatlılar</a></li>
+        <li><a href="/kartahminleme">Kâr Tahminleme</a></li>
+        <li><a href="/yenisube">Yeni Şube</a></li>
+      </ul>
+    </div>
+
+    <!-- Çıkış Yap Butonu -->
+    <div class="logout-button-container">
+      <button id="logout-button" onclick="logout()">Çıkış Yap</button>
+    </div>
+
+    <div class="main-container">
+      <div class="header">
+        <h1>Şube Bazında Kâr Analizi</h1>
+      </div>
+
+      <!-- İlk Satır: En Fazla ve En Az Kâr Yapan Şubeler -->
+      <div class="charts-row">
+        <!-- En Fazla Kâr Yapan Şubeler -->
+        <div class="chart-container">
+          <label for="year-high-select">En Fazla Kâr İçin Yıl Seçin:</label>
+          <select id="year-high-select">
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+          <button id="update-high-chart">Güncelle</button>
+          <div id="chart_high_div"></div>
+        </div>
+
+        <!-- En Az Kâr Yapan Şubeler -->
+        <div class="chart-container">
+          <label for="year-low-select">En Az Kâr İçin Yıl Seçin:</label>
+          <select id="year-low-select">
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+          <button id="update-low-chart">Güncelle</button>
+          <div id="chart_low_div"></div>
+        </div>
+      </div>
+
+      <!-- İkinci Satır: Yeni Grafikler -->
+      <div class="charts-row">
+        <!-- En Fazla Satılan Tatlılar -->
+        <div class="chart-container">
+          <label for="year-top-sweets-select"
+            >En Fazla Satılan Tatlılar İçin Yıl Seçin:</label
+          >
+          <select id="year-top-sweets-select">
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+          <button id="update-top-sweets-chart">Güncelle</button>
+          <div id="chart_top_sweets_div"></div>
+        </div>
+        <div class="chart-container">
+          <label for="year-other-select">Yeni Grafik İçin Yıl Seçin:</label>
+          <select id="year-other-select">
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+          <button id="update-other-chart">Güncelle</button>
+          <div id="chart_other_div"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function logout() {
+        window.location.href = "/login";
+      }
+    </script>
+  </body>
+</html>

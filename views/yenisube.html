@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeni Şube Analizi</title>
+
+    <!-- Harita ve Grafik Kütüphaneleri -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS ve JavaScript Dosyaları -->
+    <link rel="stylesheet" href="/css/yenisube.css" />
+    <script src="/js/yenisube.js" defer></script>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Tatlı Evi</h2>
+      <ul>
+        <li><a href="/anasayfa">Anasayfa</a></li>
+        <li><a href="/subeler">Şubeler</a></li>
+        <li><a href="/yenisube" class="active">Yeni Şube</a></li>
+        <li><a href="/tatlilar">Tatlılar</a></li>
+        <li><a href="/kartahminleme">Kâr Tahminleme</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+      <!-- Harita -->
+      <div
+        id="map"
+        style="width: 100%; height: 500px; margin-bottom: 20px"
+      ></div>
+
+      <!-- Tablo -->
+      <h1>Kar Potansiyeli En Yüksek 10 İlçe</h1>
+      <div class="table-container">
+        <table id="yenisube-table">
+          <thead>
+            <tr>
+              <th>İlçe</th>
+              <th>Nüfus Yoğunluğu</th>
+              <th>Gelir Düzeyi</th>
+              <th>Rakip Firma Sayısı</th>
+              <th>Kira Maliyeti</th>
+              <th>Skor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dinamik veri burada yüklenecek -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sütun Grafiği -->
+      <canvas
+        id="bar-chart"
+        style="width: 100%; height: 500px; margin-top: 20px"
+      ></canvas>
+    </div>
+  </body>
+</html>

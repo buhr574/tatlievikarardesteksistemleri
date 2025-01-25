@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kâr Tahminleme</title>
+    <link rel="stylesheet" href="/css/kartahminleme.css" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script>
+      google.charts.load("current", { packages: ["corechart", "line"] });
+    </script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Tatlı Evi</h2>
+      <ul>
+        <li><a href="/anasayfa">Anasayfa</a></li>
+        <li><a href="/tatlilar">Tatlılar</a></li>
+        <li><a href="/subeler">Şubeler</a></li>
+        <li><a href="/kartahminleme">Kâr Tahminleme</a></li>
+        <li><a href="/yenisube">Yeni Şube</a></li>
+      </ul>
+    </div>
+    <div class="main-container">
+      <h1>Kâr Tahminleme</h1>
+
+      <label for="branch-select">Şube Seçin:</label>
+      <select id="branch-select">
+        <!-- Şubeler dinamik olarak yüklenecek -->
+      </select>
+
+      <button id="generate-chart">Grafik Göster</button>
+
+      <!-- Grafik alanı -->
+      <div
+        id="chart_div"
+        style="width: 100%; height: 500px; margin-top: 20px"
+      ></div>
+    </div>
+    <script src="/js/kartahminleme.js"></script>
+  </body>
+</html>
